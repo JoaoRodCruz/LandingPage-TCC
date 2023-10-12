@@ -11,7 +11,7 @@
 
 :root{
     --red: #FF6000;
-    --white: #F8F7F3;
+    --white: #DAC6C8;
     --dark: #403D38;
 }
 
@@ -29,6 +29,7 @@ body{
     width: 100%;
     background: var(--white);
     transition: all 0.5s;
+    position: fixed;
 }
 
 .navigation .logo{
@@ -89,4 +90,110 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0px 10%;
 }
+
+.home-text{
+    max-width: 37rem;
+}
+
+.home-text .text-h4{
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}
+
+.home-text .text-h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+}
+
+.home-text p{
+    margin-bottom: 4rem;
+}
+
+.home-button{
+    padding: 15px 45px;
+    background: var(--red);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.home-button:hover{
+    background: #fc4c35;
+}
+
+.home-img img{
+    width: 100%;
+}
+
+@media (max-width: 785px) {
+    .navigation{
+        padding: 18px 20px;
+    }
+
+    .menu{
+        display: block;
+    }
+
+    .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+    }
+
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+
+    .nav-menu.ativo{
+        right: 0;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .home{
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+        gap: 5rem;
+    }
+
+    .home .text-h4{
+        font-size: 15px;
+    }
+
+    .home .text-h1{
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+
+    .home p{
+        font-size: 15px;
+    }
+
+    .home img{
+        width: 100%;
+    }
+}
+
